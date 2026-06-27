@@ -24,7 +24,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 30; padding: 12px 16px; color: var(--black); background: var(--white); transform: translateY(-140%); }
 .skip-link:focus { transform: translateY(0); }
 
-.site-header { min-height: var(--header); padding: 9px max(20px, calc((100vw - 1180px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 3px solid var(--red); background: oklch(0.075 0 0 / .97); position: sticky; top: 0; z-index: 20; }
+.site-header { min-height: var(--header); padding: 9px max(20px, calc((100vw - 1180px) / 2)) 9px clamp(16px, 3vw, 44px); display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 3px solid var(--red); background: oklch(0.075 0 0 / .97); position: sticky; top: 0; z-index: 20; }
 .wordmark { width: 130px; height: 70px; display: block; text-decoration: none; }
 .wordmark img { width: 100%; height: 100%; object-fit: contain; }
 .site-header nav { display: flex; align-items: center; gap: 34px; }
