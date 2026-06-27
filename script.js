@@ -4,14 +4,14 @@ const nav = document.querySelector('#site-nav');
 navToggle?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
-  navToggle.textContent = isOpen ? 'Close' : 'Menu';
+  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
 
 nav?.addEventListener('click', (event) => {
   if (event.target instanceof HTMLAnchorElement) {
     nav.classList.remove('open');
     navToggle?.setAttribute('aria-expanded', 'false');
-    if (navToggle) navToggle.textContent = 'Menu';
+    navToggle?.setAttribute('aria-label', 'Open menu');
   }
 });
 

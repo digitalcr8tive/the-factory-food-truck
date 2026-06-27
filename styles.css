@@ -30,7 +30,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-header nav { display: flex; align-items: center; gap: 34px; }
 .site-header nav a { min-height: 44px; display: flex; align-items: center; font: 800 .82rem/1 var(--body); text-decoration: none; text-transform: uppercase; letter-spacing: .06em; }
 .site-header nav a:hover { color: var(--red); }
-.nav-toggle { display: none; min-height: 44px; padding: 0 16px; color: var(--white); border: 2px solid var(--white); background: transparent; font-weight: 900; text-transform: uppercase; }
+.nav-toggle { display: none; width: 48px; height: 44px; padding: 0; align-items: center; justify-content: center; color: var(--white); border: 2px solid var(--white); background: transparent; cursor: pointer; }
+.nav-toggle-bars, .nav-toggle-bars::before, .nav-toggle-bars::after { content: ""; display: block; width: 22px; height: 2.5px; background: currentColor; border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+.nav-toggle-bars { position: relative; }
+.nav-toggle-bars::before, .nav-toggle-bars::after { position: absolute; left: 0; }
+.nav-toggle-bars::before { top: -7px; }
+.nav-toggle-bars::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars { background: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { top: 0; transform: rotate(-45deg); }
 
 .hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .96) 0%, oklch(0.075 0 0 / .86) 32%, oklch(0.075 0 0 / .46) 58%, oklch(0.075 0 0 / .08) 100%), url("assets/factory-header-facebook.jpg"); background-size: cover; background-position: center; }
 .hero-copy { width: min(690px, 57vw); min-height: calc(100svh - var(--header)); padding: clamp(28px, 4vw, 58px) 20px clamp(54px, 7vw, 88px) clamp(20px, 3.4vw, 50px); display: flex; flex-direction: column; justify-content: flex-start; position: relative; z-index: 2; }
@@ -131,7 +139,7 @@ footer p { margin: 0; font-weight: 800; }
 .footer-meta { color: var(--muted); text-align: right; font-size: .86rem; }
 
 @media (max-width: 900px) {
-  .nav-toggle { display: block; }
+  .nav-toggle { display: inline-flex; }
   .site-header nav { position: absolute; top: var(--header); left: 0; right: 0; padding: 16px 20px 22px; display: none; flex-direction: column; align-items: stretch; gap: 4px; background: var(--black); border-bottom: 3px solid var(--red); }
   .site-header nav.open { display: flex; }
   .hero { background-image: linear-gradient(90deg, oklch(0.075 0 0 / .96) 0%, oklch(0.075 0 0 / .83) 52%, oklch(0.075 0 0 / .28) 100%), url("assets/factory-header-facebook.jpg"); background-position: 62% center; }
