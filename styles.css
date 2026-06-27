@@ -34,9 +34,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .96) 0%, oklch(0.075 0 0 / .86) 32%, oklch(0.075 0 0 / .46) 58%, oklch(0.075 0 0 / .08) 100%), url("assets/factory-header-facebook.jpg"); background-size: cover; background-position: center; }
 .hero-copy { width: min(690px, 57vw); min-height: calc(100svh - var(--header)); padding: clamp(28px, 4vw, 58px) 20px clamp(54px, 7vw, 88px) clamp(20px, 3.4vw, 50px); display: flex; flex-direction: column; justify-content: flex-start; position: relative; z-index: 2; }
-.hero-copy::before { content: ""; position: absolute; width: 190px; height: 190px; right: -36px; bottom: 22px; background: var(--red); opacity: .16; transform: rotate(17deg); z-index: -1; }
 .hero-brand { width: max-content; margin: 0 0 12px; position: relative; }
-.hero-brand::after { content: ""; position: absolute; width: 80%; height: 12px; left: 10%; bottom: 8px; background: var(--red); z-index: -1; transform: rotate(-3deg); }
 .hero-brand img { width: min(200px, 52vw); filter: drop-shadow(0 0 1px var(--white)) drop-shadow(0 2px 0 oklch(1 0 0 / .7)); transform: rotate(-1.5deg); }
 .hero h1 { margin: 0; max-width: 7ch; font: 900 clamp(4rem, 7.8vw, 6rem)/.88 var(--display); letter-spacing: -.025em; text-transform: uppercase; text-wrap: balance; }
 .hero h1 span { display: block; color: var(--white); }
@@ -53,8 +51,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hours-line span { color: var(--muted); }
 
 .intro { width: 100%; margin: 0; padding: clamp(80px, 10vw, 140px) max(20px, calc((100vw - 1180px) / 2)); display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(48px, 8vw, 100px); align-items: center; color: var(--black); background: var(--white); }
-.intro-logo { min-height: clamp(300px, 34vw, 470px); padding: 24px; display: flex; align-items: center; background: var(--white); border: 7px solid var(--red); position: relative; transform: rotate(-1deg); }
-.intro-logo img { width: 100%; margin: 0 auto; object-fit: contain; }
+.intro-logo { min-height: clamp(300px, 34vw, 470px); padding: clamp(28px, 4vw, 56px); display: flex; align-items: center; justify-content: center; background: var(--white); border: 7px solid var(--red); position: relative; transform: rotate(-1deg); }
+.intro-logo img { width: 100%; max-width: 100%; max-height: 100%; margin: 0 auto; object-fit: contain; }
 .intro-logo::after { content: "Made fresh"; position: absolute; right: -20px; bottom: -17px; padding: 7px 10px; color: var(--black); background: var(--yellow); font-weight: 900; text-transform: uppercase; transform: rotate(4deg); }
 .intro-copy h2, .food-copy h2, .visit-copy h2, .social-section h2 { margin: 0 0 20px; font: 900 clamp(2.8rem, 6vw, 5.6rem)/.9 var(--display); letter-spacing: -.02em; text-transform: uppercase; text-wrap: balance; }
 .intro-copy h2 { color: var(--red); }
@@ -101,9 +99,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .advisory { width: 100%; max-width: none; margin: 34px 0 0; padding: 18px clamp(12px, 3vw, 30px); color: var(--white); background: var(--black); border-top: 2px solid var(--red); border-bottom: 2px solid var(--red); font-size: .84rem; text-align: center; }
 
 .food-story { padding: clamp(90px, 11vw, 150px) max(20px, calc((100vw - 1180px) / 2)); display: grid; grid-template-columns: .8fr 1.2fr .8fr; gap: clamp(22px, 5vw, 64px); align-items: center; position: relative; overflow: hidden; color: var(--white); background: var(--red); }
-.food-story::before, .food-story::after { content: ""; position: absolute; left: 0; width: 100%; height: 22px; background: var(--white); clip-path: polygon(0 30%, 6% 70%, 12% 25%, 19% 65%, 26% 20%, 34% 70%, 42% 25%, 51% 68%, 60% 18%, 68% 66%, 77% 25%, 86% 72%, 94% 24%, 100% 60%, 100% 100%, 0 100%); }
-.food-story::before { top: 0; }
-.food-story::after { bottom: 0; transform: rotate(180deg); }
 .food-image { margin: 0; height: min(620px, 62vw); overflow: hidden; border: 8px solid var(--white); }
 .food-image img { width: 100%; height: 100%; object-fit: cover; }
 .food-image:first-child { transform: rotate(-2deg); }
