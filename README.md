@@ -1,6 +1,6 @@
 # The Factory Food Truck website
 
-A standalone customer-facing site for The Factory at 1521 AR-161 in Jacksonville, Arkansas.
+A single-page customer-facing landing site for The Factory at 1521 AR-161 in Jacksonville, Arkansas.
 
 ## Preview
 

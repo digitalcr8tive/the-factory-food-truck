@@ -15,7 +15,8 @@ nav?.addEventListener('click', (event) => {
   }
 });
 
-document.querySelector('#year').textContent = String(new Date().getFullYear());
+const yearElement = document.querySelector('#year');
+if (yearElement) yearElement.textContent = String(new Date().getFullYear());
 
 const cateringForm = document.querySelector('#catering-form');
 const cateringStatus = document.querySelector('#catering-status');

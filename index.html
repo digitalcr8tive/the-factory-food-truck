@@ -57,10 +57,10 @@
       <span class="nav-toggle-bars" aria-hidden="true"></span>
     </button>
     <nav id="site-nav" aria-label="Main navigation">
-      <a href="menu.html">Menu</a>
-      <a href="catering.html">Catering</a>
-      <a href="visit.html">Visit us</a>
-      <a href="follow-us.html">Follow us</a>
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#visit">Visit us</a>
+      <a href="#follow-us">Follow us</a>
     </nav>
   </header>
 
@@ -73,8 +73,8 @@
         <h1><span>Big flavor.</span><strong>Bigger cravings.</strong></h1>
         <p class="hero-lede">Chicken, loaded fries, lemonades, and comfort food made fresh when you order.</p>
         <div class="hero-actions">
-          <a class="button button-light" href="menu.html">View the menu</a>
-          <a class="button button-outline" href="visit.html">Visit us</a>
+          <a class="button button-light" href="#menu">View the menu</a>
+          <a class="button button-outline" href="#visit">Visit us</a>
         </div>
         <p class="hours-line"><strong>Mon–Sat</strong> 11 AM–5 PM <span>or sellout</span></p>
       </div>
@@ -169,7 +169,7 @@
           <strong>Planning a crowd?</strong>
           <p>Factory teas are available only with or for catering orders.</p>
         </div>
-        <a class="button button-red" href="catering.html">Request catering</a>
+        <a class="button button-red" href="#catering">Request catering</a>
       </aside>
       <p class="advisory"><strong>Consumer advisory:</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
     </section>
@@ -211,7 +211,119 @@
       </div>
     </section>
 
-    <section class="social-section" id="social">
+    <section class="catering-form-section" id="catering" aria-labelledby="catering-form-title">
+      <div class="catering-form-intro">
+        <p class="script-line">Bring the Factory</p>
+        <h2 id="catering-form-title">Feed your people.</h2>
+        <p>Tell us about your event and we’ll follow up with the right catering options. Factory teas are available only with or for catering orders.</p>
+      </div>
+      <div class="catering-form-frame">
+        <form id="catering-form" class="native-catering-form" novalidate>
+          <div class="native-form-header">
+            <h3>Catering Inquiry Form</h3>
+            <p>Please provide details about your catering needs to receive a customized response.</p>
+          </div>
+
+          <div class="native-form-body">
+            <div class="form-field form-field-full">
+              <fieldset class="field-group">
+                <legend>Full Name <span aria-hidden="true">*</span></legend>
+                <div class="form-grid form-grid-two">
+                  <label>
+                    <span class="sr-only">First Name</span>
+                    <input name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required>
+                    <small>First Name</small>
+                  </label>
+                  <label>
+                    <span class="sr-only">Last Name</span>
+                    <input name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required>
+                    <small>Last Name</small>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="example@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(000) 000-0000" required>
+              <small>Format: (000) 000-0000.</small>
+            </div>
+
+            <div class="form-field">
+              <label for="event-date">Event Date <span aria-hidden="true">*</span></label>
+              <input id="event-date" name="eventDate" type="date" required>
+            </div>
+            <div class="form-field">
+              <label for="event-type">Event Type <span aria-hidden="true">*</span></label>
+              <select id="event-type" name="eventType" required>
+                <option value="">Please Select</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="guest-count">Number of Guests <span aria-hidden="true">*</span></label>
+              <input id="guest-count" name="guestCount" type="number" min="1" step="1" required>
+            </div>
+
+            <fieldset class="field-group form-field-full">
+              <legend>Event Venue / Location</legend>
+              <div class="form-grid form-grid-two">
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address</span>
+                  <input name="streetAddress" type="text" autocomplete="street-address" placeholder="Street Address">
+                  <small>Street Address</small>
+                </label>
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address Line 2</span>
+                  <input name="streetAddressLine2" type="text" autocomplete="address-line2" placeholder="Street Address Line 2">
+                  <small>Street Address Line 2</small>
+                </label>
+                <label>
+                  <span class="sr-only">City</span>
+                  <input name="city" type="text" autocomplete="address-level2" placeholder="City">
+                  <small>City</small>
+                </label>
+                <label>
+                  <span class="sr-only">State / Province</span>
+                  <input name="state" type="text" autocomplete="address-level1" placeholder="State / Province">
+                  <small>State / Province</small>
+                </label>
+                <label>
+                  <span class="sr-only">Postal / Zip Code</span>
+                  <input name="postalCode" type="text" autocomplete="postal-code" inputmode="numeric" placeholder="Postal / Zip Code">
+                  <small>Postal / Zip Code</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field form-field-full">
+              <label for="preferred-menu">Preferred Cuisine or Menu</label>
+              <input id="preferred-menu" name="preferredMenu" type="text" placeholder="Preferred Cuisine or Menu">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="comments">Additional Requests or Comments</label>
+              <textarea id="comments" name="comments" rows="5" placeholder="Additional Requests or Comments"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button class="button button-red" type="submit">Submit Inquiry</button>
+              <p id="catering-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="social-section" id="follow-us">
       <p>Follow the production line</p>
       <h2>@thefactorylr</h2>
       <div class="social-links">
@@ -224,9 +336,9 @@
   <footer>
     <img class="footer-logo" src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
     <p>Fresh out the Factory. Fast. Fresh. Factory made.</p>
-    <p class="footer-meta">Jacksonville, Arkansas<br>© <span id="year"></span> The Factory LLC</p>
   </footer>
 
+  <script src="catering-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
