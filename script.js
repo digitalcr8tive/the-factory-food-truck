@@ -16,3 +16,45 @@ nav?.addEventListener('click', (event) => {
 });
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());
+
+const cateringForm = document.querySelector('#catering-form');
+const cateringStatus = document.querySelector('#catering-status');
+const cateringEndpoint = '';
+
+cateringForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  if (!cateringForm.checkValidity()) {
+    cateringForm.reportValidity();
+    return;
+  }
+
+  if (!cateringEndpoint) {
+    cateringStatus.textContent = 'This form is ready for the Resend connection, but email delivery is not connected yet. Your inquiry was not sent.';
+    cateringStatus.className = 'form-status is-pending';
+    return;
+  }
+
+  const submitButton = cateringForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  cateringStatus.textContent = 'Sending your inquiry…';
+  cateringStatus.className = 'form-status is-pending';
+
+  try {
+    const response = await fetch(cateringEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(cateringForm)))
+    });
+
+    if (!response.ok) throw new Error('Unable to submit inquiry');
+    cateringForm.reset();
+    cateringStatus.textContent = 'Inquiry sent. The Factory will follow up soon.';
+    cateringStatus.className = 'form-status is-success';
+  } catch (error) {
+    cateringStatus.textContent = 'We could not send your inquiry. Please try again later.';
+    cateringStatus.className = 'form-status is-error';
+  } finally {
+    submitButton.disabled = false;
+  }
+});

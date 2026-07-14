@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request The Factory Food Truck for your next event. Catering inquiries for Jacksonville and surrounding areas.">
+  <meta name="theme-color" content="#090909">
+  <title>Catering | The Factory Food Truck</title>
+  <link rel="icon" href="assets/factory-logo-white.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="catering-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html#top" aria-label="The Factory home">
+      <img src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="index.html#menu">Menu</a>
+      <a href="index.html#visit">Visit us</a>
+      <a href="catering.html" aria-current="page">Catering</a>
+      <a href="index.html#social">Follow us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="catering-hero">
+      <div class="catering-hero-copy">
+        <p class="script-line">Bring the Factory</p>
+        <h1>Feed your people.</h1>
+        <p>Tell us about your event and we’ll follow up with the right catering options. Factory teas are available only with or for catering orders.</p>
+        <a class="text-link" href="index.html#menu">Back to the full menu →</a>
+      </div>
+      <div class="catering-hero-mark" aria-hidden="true">
+        <img src="assets/factory-logo-client.png" alt="" width="667" height="618">
+      </div>
+    </section>
+
+    <section class="catering-form-section" aria-labelledby="catering-form-title">
+      <div class="catering-form-intro">
+        <h2 id="catering-form-title">Catering request</h2>
+        <p>Share the details below so The Factory can learn what you’re planning and prepare a customized response.</p>
+      </div>
+      <div class="catering-form-frame">
+        <form id="catering-form" class="native-catering-form" novalidate>
+          <div class="native-form-header">
+            <h3>Catering Inquiry Form</h3>
+            <p>Please provide details about your catering needs to receive a customized response.</p>
+          </div>
+
+          <div class="native-form-body">
+            <div class="form-field form-field-full">
+              <fieldset class="field-group">
+                <legend>Full Name <span aria-hidden="true">*</span></legend>
+                <div class="form-grid form-grid-two">
+                  <label>
+                    <span class="sr-only">First Name</span>
+                    <input name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required>
+                    <small>First Name</small>
+                  </label>
+                  <label>
+                    <span class="sr-only">Last Name</span>
+                    <input name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required>
+                    <small>Last Name</small>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="example@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(000) 000-0000" required>
+              <small>Format: (000) 000-0000.</small>
+            </div>
+
+            <div class="form-field">
+              <label for="event-date">Event Date <span aria-hidden="true">*</span></label>
+              <input id="event-date" name="eventDate" type="date" required>
+            </div>
+            <div class="form-field">
+              <label for="event-type">Event Type <span aria-hidden="true">*</span></label>
+              <select id="event-type" name="eventType" required>
+                <option value="">Please Select</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="guest-count">Number of Guests <span aria-hidden="true">*</span></label>
+              <input id="guest-count" name="guestCount" type="number" min="1" step="1" required>
+            </div>
+
+            <fieldset class="field-group form-field-full">
+              <legend>Event Venue / Location</legend>
+              <div class="form-grid form-grid-two">
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address</span>
+                  <input name="streetAddress" type="text" autocomplete="street-address" placeholder="Street Address">
+                  <small>Street Address</small>
+                </label>
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address Line 2</span>
+                  <input name="streetAddressLine2" type="text" autocomplete="address-line2" placeholder="Street Address Line 2">
+                  <small>Street Address Line 2</small>
+                </label>
+                <label>
+                  <span class="sr-only">City</span>
+                  <input name="city" type="text" autocomplete="address-level2" placeholder="City">
+                  <small>City</small>
+                </label>
+                <label>
+                  <span class="sr-only">State / Province</span>
+                  <input name="state" type="text" autocomplete="address-level1" placeholder="State / Province">
+                  <small>State / Province</small>
+                </label>
+                <label>
+                  <span class="sr-only">Postal / Zip Code</span>
+                  <input name="postalCode" type="text" autocomplete="postal-code" inputmode="numeric" placeholder="Postal / Zip Code">
+                  <small>Postal / Zip Code</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field form-field-full">
+              <label for="preferred-menu">Preferred Cuisine or Menu</label>
+              <input id="preferred-menu" name="preferredMenu" type="text" placeholder="Preferred Cuisine or Menu">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="comments">Additional Requests or Comments</label>
+              <textarea id="comments" name="comments" rows="5" placeholder="Additional Requests or Comments"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button class="button button-red" type="submit">Submit Inquiry</button>
+              <p id="catering-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p class="form-fallback">Email delivery will be connected through Resend before this form is used for live catering inquiries.</p>
+    </section>
+  </main>
+
+  <footer>
+    <img class="footer-logo" src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
+    <p>Fresh out the Factory. Fast. Fresh. Factory made.</p>
+    <p class="footer-meta">Jacksonville, Arkansas<br>© <span id="year"></span> The Factory LLC</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
