@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Factory Food Truck full chicken, fries, lemonade, sides, and combo menu in Jacksonville, Arkansas.">
+  <meta name="theme-color" content="#090909">
+  <title>Menu | The Factory Food Truck</title>
+  <link rel="icon" href="assets/factory-logo-white.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="menu-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html#top" aria-label="The Factory home"><img src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="visit.html">Visit us</a>
+      <a href="follow-us.html">Follow us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <p class="script-line">Made to order</p>
+      <h1>Full menu.</h1>
+      <p>Chicken, loaded fries, fresh lemonades, sides, and combos served while supplies last.</p>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><h2>Full menu</h2></div>
+      <div class="menu-layout">
+        <article class="menu-block wings-block">
+          <div class="menu-title"><h3>Chicken</h3><span>Wings, tenders + flavors</span></div>
+          <dl class="price-list compact chicken-tenders"><div><dt>Chicken tenders (3 ct)</dt><dd>$5.99</dd></div></dl>
+          <dl class="price-list">
+            <div><dt>6 wings</dt><dd>$8.99</dd></div>
+            <div><dt>10 wings</dt><dd>$12.99</dd></div>
+            <div><dt>20 wings</dt><dd>$21.99</dd></div>
+            <div><dt>30 wings</dt><dd>$31.99</dd></div>
+            <div><dt>50 wings</dt><dd>$48.99</dd></div>
+            <div><dt>100 wings</dt><dd>$96.99</dd></div>
+          </dl>
+          <div class="flavor-board"><h4>Factory flavors</h4><ul>
+            <li>BBQ</li><li>Jamaican Honey Jerk</li><li>Buffalo</li><li>Cajun Ranch Dry Rub</li><li>Wet Lemon Pepper Supreme</li><li>Lemon Pepper Dry Rub</li><li>Sweet Heat Dry Rub <span class="new-tag">New</span></li>
+          </ul></div>
+        </article>
+        <article class="menu-block fries-block">
+          <div class="menu-title"><h3>Factory fries</h3><span>Regular fries $2.99</span></div>
+          <div class="dish-list">
+            <div><h4>The Classic <b>$8.99</b></h4><p>Cheddar cheese, bacon, ranch</p></div>
+            <div><h4>The Southern <b>$9.99</b></h4><p>Cheddar cheese, sour cream, bacon, green onion</p></div>
+            <div><h4>Cajun Stack <b>$7.99</b></h4><p>Cajun Ranch dry rub, double ranch</p></div>
+            <div><h4>Jerk House <b>$10.99</b></h4><p>Jamaican Honey Jerk chicken and cheese</p></div>
+            <div><h4>Factory Fire <b>$10.99</b></h4><p>Cheese, jalapeños, Buffalo chicken</p></div>
+          </div>
+          <div class="addons"><h4>Add-ons</h4><p>Cheese sauce $1.00 · Jalapeños $0.75 · Chicken $2.50 · Bacon $1.50 · Ranch $0.75 · Any sauce or dry rub $0.75</p></div>
+        </article>
+        <article class="menu-block drinks-block">
+          <div class="menu-title"><h3>Factory lemonades</h3><span>Made fresh daily</span></div>
+          <div class="featured-price"><strong>$4.99</strong><span>Regular</span></div>
+          <ul class="drink-flavors"><li>Strawberry</li><li>Pineapple</li><li>Mango</li><li>Fresh Basil</li><li>Peach</li></ul>
+          <dl class="price-list compact"><div><dt>Kids lemonade</dt><dd>$2.99</dd></div></dl>
+          <p class="small-note">Add mango, peach, or Arnold Palmer flavor for $0.75.</p>
+        </article>
+        <article class="menu-block extras-block">
+          <div class="menu-title"><h3>Sides + combos</h3><span>Round out your order</span></div>
+          <dl class="price-list compact"><div><dt>Yams</dt><dd>$3.59</dd></div><div><dt>Extra sauce (2 oz)</dt><dd>$0.75</dd></div><div><dt>Factoroni &amp; Cheese</dt><dd>$3.59</dd></div></dl>
+          <p class="small-note">Factoroni add-ons: bacon $1.50, jalapeños $0.75, chicken $2.50.</p>
+          <div class="combo-list"><div><h4>Sweet Heat Combo</h4><p>6 wings + fries + drink</p><strong>$13.99</strong></div><div><h4>Axeline Combo</h4><p>10 wings + fries + drink</p><strong>$17.99</strong></div></div>
+        </article>
+      </div>
+      <aside class="catering-note"><div><strong>Planning a crowd?</strong><p>Factory teas are available only with or for catering orders.</p></div><a class="button button-red" href="catering.html">Request catering</a></aside>
+      <p class="advisory"><strong>Consumer advisory:</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
+    </section>
+  </main>
+
+  <footer><img class="footer-logo" src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618"><p>Fresh out the Factory. Fast. Fresh. Factory made.</p><p class="footer-meta">Jacksonville, Arkansas<br>© <span id="year"></span> The Factory LLC</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@ document.querySelector('#year').textContent = String(new Date().getFullYear());
 
 const cateringForm = document.querySelector('#catering-form');
 const cateringStatus = document.querySelector('#catering-status');
-const cateringEndpoint = '';
+const cateringEndpoint = window.FACTORY_CATERING_ENDPOINT || '';
 
 cateringForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -30,7 +30,7 @@ cateringForm?.addEventListener('submit', async (event) => {
   }
 
   if (!cateringEndpoint) {
-    cateringStatus.textContent = 'This form is ready for the Resend connection, but email delivery is not connected yet. Your inquiry was not sent.';
+    cateringStatus.textContent = 'This inquiry form is not available yet. Please contact The Factory directly.';
     cateringStatus.className = 'form-status is-pending';
     return;
   }
