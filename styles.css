@@ -41,7 +41,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 0; transform: rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { top: 0; transform: rotate(-45deg); }
 
-.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-size: 125% auto; background-position: 66% center; }
+.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-size: cover; background-position: center; }
 .hero-copy { width: min(690px, 57vw); min-height: calc(100svh - var(--header)); padding: clamp(28px, 4vw, 58px) 20px clamp(54px, 7vw, 88px) clamp(20px, 3.4vw, 50px); display: flex; flex-direction: column; justify-content: flex-start; position: relative; z-index: 2; }
 .hero-brand { width: max-content; margin: 0 0 12px; position: relative; }
 .hero-brand img { width: min(200px, 52vw); transform: rotate(-1.5deg); }
@@ -107,8 +107,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .drink-flavors { padding: 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
 .drink-flavors li { padding: 7px 10px; border: 2px solid var(--white); font-weight: 800; }
 .tea-menu { margin-top: 30px; padding-top: 22px; border-top: 3px solid var(--red); }
-.tea-menu h4 { margin: 0 0 12px; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; font: 900 1.45rem/1 var(--display); text-transform: uppercase; }
-.tea-menu h4 strong { color: var(--yellow); font: inherit; }
+.tea-menu h4 { margin: 0; font: 900 clamp(1.8rem, 3vw, 2.4rem)/1 var(--display); text-transform: uppercase; }
+.tea-menu .featured-price { margin-top: 18px; }
 .tea-menu .small-note { margin-top: 12px; }
 .compact { margin-bottom: 12px; }
 .price-list.compact.chicken-tenders { margin-bottom: 0; }
