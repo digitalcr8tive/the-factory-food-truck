@@ -1,6 +1,6 @@
 # The Factory Food Truck website
 
-A standalone customer-facing site for The Factory at 1521 AR-161 in Jacksonville, Arkansas.
+A single-page customer-facing landing site for The Factory at 1521 AR-161 in Jacksonville, Arkansas.
 
 ## Preview
 
@@ -24,3 +24,7 @@ Menu prices and descriptions were transcribed from the supplied menu board on Ju
 ## Deployment
 
 This static site is published through GitHub Pages from the repository's `main` branch.
+
+## Catering email handoff
+
+The native catering form is ready for a server-side Resend connection. The Cloudflare Worker in `resend-worker/` handles validation and delivery without exposing the Resend API key in GitHub Pages browser code. Follow `resend-worker/README.md` when the business recipient and sender addresses are ready.

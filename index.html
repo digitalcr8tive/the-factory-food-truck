@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Factory Food Truck serves made-to-order wings, loaded fries, lemonades, and teas at 1521 AR-161 in Jacksonville, Arkansas.">
+  <meta name="description" content="The Factory Food Truck serves made-to-order chicken, loaded fries, and fresh lemonades at 1521 AR-161 in Jacksonville, Arkansas. Catering is available.">
   <meta name="theme-color" content="#090909">
   <title>The Factory Food Truck | Jacksonville, AR</title>
   <link rel="icon" href="assets/factory-logo-white.png" type="image/png">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://digitalcr8tive.github.io/the-factory-food-truck/">
   <meta property="og:title" content="The Factory Food Truck | Jacksonville, AR">
-  <meta property="og:description" content="Made-to-order wings, loaded fries, lemonades, and teas at 1521 AR-161 in Jacksonville, Arkansas.">
+  <meta property="og:description" content="Made-to-order chicken, loaded fries, and fresh lemonades at 1521 AR-161 in Jacksonville, Arkansas. Catering is available.">
   <meta property="og:image" content="https://digitalcr8tive.github.io/the-factory-food-truck/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -20,9 +20,9 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Factory Food Truck | Jacksonville, AR">
-  <meta name="twitter:description" content="Made-to-order wings, loaded fries, lemonades, and teas in Jacksonville, Arkansas.">
+  <meta name="twitter:description" content="Made-to-order chicken, loaded fries, and fresh lemonades in Jacksonville, Arkansas. Catering is available.">
   <meta name="twitter:image" content="https://digitalcr8tive.github.io/the-factory-food-truck/assets/social-card.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260722-photos">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,15 +51,16 @@
 
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="The Factory home">
-      <img src="assets/factory-header-logo.svg" alt="The Factory Food Truck" width="1375" height="906">
+      <img src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
     </button>
     <nav id="site-nav" aria-label="Main navigation">
       <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
       <a href="#visit">Visit us</a>
-      <a href="#social">Follow us</a>
+      <a href="#follow-us">Follow us</a>
     </nav>
   </header>
 
@@ -67,13 +68,13 @@
     <section class="hero" id="top">
       <div class="hero-copy">
         <div class="hero-brand">
-          <img src="assets/factory-logo-transparent.png" alt="The Factory Food Truck" width="718" height="666">
+          <img src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
         </div>
         <h1><span>Big flavor.</span><strong>Bigger cravings.</strong></h1>
-        <p class="hero-lede">Wings, loaded fries, lemonades, teas, and comfort food made fresh when you order.</p>
+        <p class="hero-lede">Comfort food made fresh when you order.</p>
         <div class="hero-actions">
           <a class="button button-light" href="#menu">View the menu</a>
-          <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=1521+AR-161+Jacksonville+AR" target="_blank" rel="noopener">Get directions</a>
+          <a class="button button-outline" href="#visit">Visit us</a>
         </div>
         <p class="hours-line"><strong>Mon–Sat</strong> 11 AM–5 PM <span>or sellout</span></p>
       </div>
@@ -81,11 +82,11 @@
 
     <section class="intro">
       <div class="intro-logo">
-        <img src="assets/factory-logo-transparent.png" alt="The Factory Food Truck" width="718" height="666">
+        <img src="assets/factory-logo-client-transparent.png" alt="The Factory Food Truck" width="667" height="618">
       </div>
       <div class="intro-copy">
         <h2>Comfort made bold.</h2>
-        <p>The Factory turns familiar favorites into bold made-to-order plates. Choose your wing flavor, build your fries, and finish it with a fresh lemonade or tea.</p>
+        <p>The Factory turns familiar favorites into bold made-to-order plates. Choose your chicken, build your fries, and finish it with a fresh lemonade.</p>
       </div>
     </section>
 
@@ -96,7 +97,10 @@
 
       <div class="menu-layout">
         <article class="menu-block wings-block">
-          <div class="menu-title"><h3>Wings</h3><span>Choose your flavor</span></div>
+          <div class="menu-title"><h3>Chicken</h3><span>Wings, tenders + flavors</span></div>
+          <dl class="price-list compact chicken-tenders">
+            <div><dt>Chicken tenders (3 ct)</dt><dd>$5.99</dd></div>
+          </dl>
           <dl class="price-list">
             <div><dt>6 wings</dt><dd>$8.99</dd></div>
             <div><dt>10 wings</dt><dd>$12.99</dd></div>
@@ -142,15 +146,13 @@
           </ul>
           <dl class="price-list compact">
             <div><dt>Kids lemonade</dt><dd>$2.99</dd></div>
-            <div><dt>Factory teas</dt><dd>$3.99</dd></div>
           </dl>
-          <p class="small-note">Sweet tea or unsweet tea. Add mango, peach, or Arnold Palmer flavor for $0.75.</p>
+          <p class="small-note">Add mango, peach, or Arnold Palmer flavor for $0.75.</p>
         </article>
 
         <article class="menu-block extras-block">
           <div class="menu-title"><h3>Sides + combos</h3><span>Round out your order</span></div>
           <dl class="price-list compact">
-            <div><dt>Chicken tenders (3 pc)</dt><dd>$5.99</dd></div>
             <div><dt>Yams</dt><dd>$3.59</dd></div>
             <div><dt>Extra sauce (2 oz)</dt><dd>$0.75</dd></div>
             <div><dt>Factoroni &amp; Cheese</dt><dd>$3.59</dd></div>
@@ -162,12 +164,19 @@
           </div>
         </article>
       </div>
+      <aside class="catering-note">
+        <div>
+          <strong>Planning a crowd?</strong>
+          <p>Factory teas are available only with or for catering orders.</p>
+        </div>
+        <a class="button button-red" href="#catering">Request catering</a>
+      </aside>
       <p class="advisory"><strong>Consumer advisory:</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
     </section>
 
     <section class="food-story" aria-label="Fresh Factory drinks">
       <figure class="food-image tall">
-        <img src="assets/factory-made.jpg" alt="A strawberry basil Factory lemonade made fresh at the truck" width="640" height="1136">
+        <img src="assets/factory-drink-yellow.jpg" alt="A yellow Factory lemonade in a clear cup with ice" width="480" height="960">
       </figure>
       <div class="food-copy">
         <p class="script-line">Factory made</p>
@@ -176,7 +185,7 @@
         <a class="text-link" href="https://www.instagram.com/thefactorylr/" target="_blank" rel="noopener">See what’s coming off the line →</a>
       </div>
       <figure class="food-image tall front-cup">
-        <img src="assets/factory-lemonades.jpg" alt="Blue and peach Factory lemonades in clear cups" width="640" height="1136">
+        <img src="assets/factory-drink-blue.jpg" alt="A blue Factory lemonade in a clear cup with citrus and berries" width="480" height="960">
       </figure>
     </section>
 
@@ -186,7 +195,8 @@
         <address>1521 AR-161<br>Jacksonville, AR</address>
         <p class="visit-hours"><strong>Monday–Saturday</strong><br>11 AM–5 PM, or until sold out<br><span>Closed Sunday</span></p>
         <div class="visit-actions">
-          <a class="button button-red" href="https://www.google.com/maps/search/?api=1&query=1521+AR-161+Jacksonville+AR" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="button button-red" href="https://maps.apple.com/?address=1521%20AR-161,%20Jacksonville,%20AR" target="_blank" rel="noopener">Open in Apple Maps</a>
+          <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=1521+AR-161+Jacksonville+AR" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
         <p class="pickup-note">Walk-up ordering and pickup only. Service may end early when the kitchen sells out.</p>
       </div>
@@ -201,7 +211,118 @@
       </div>
     </section>
 
-    <section class="social-section" id="social">
+    <section class="catering-form-section" id="catering" aria-labelledby="catering-form-title">
+      <div class="catering-form-intro">
+        <h2 id="catering-form-title">Feed your people.</h2>
+        <p>Tell us about your event and we’ll follow up with the right catering options. Factory teas are available only with or for catering orders.</p>
+      </div>
+      <div class="catering-form-frame">
+        <form id="catering-form" class="native-catering-form" novalidate>
+          <div class="native-form-header">
+            <h3>Catering Inquiry Form</h3>
+            <p>Please provide details about your catering needs to receive a customized response.</p>
+          </div>
+
+          <div class="native-form-body">
+            <div class="form-field form-field-full">
+              <fieldset class="field-group">
+                <legend>Full Name <span aria-hidden="true">*</span></legend>
+                <div class="form-grid form-grid-two">
+                  <label>
+                    <span class="sr-only">First Name</span>
+                    <input name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required>
+                    <small>First Name</small>
+                  </label>
+                  <label>
+                    <span class="sr-only">Last Name</span>
+                    <input name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required>
+                    <small>Last Name</small>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="example@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(000) 000-0000" required>
+              <small>Format: (000) 000-0000.</small>
+            </div>
+
+            <div class="form-field">
+              <label for="event-date">Event Date <span aria-hidden="true">*</span></label>
+              <input id="event-date" name="eventDate" type="date" required>
+            </div>
+            <div class="form-field">
+              <label for="event-type">Event Type <span aria-hidden="true">*</span></label>
+              <select id="event-type" name="eventType" required>
+                <option value="">Please Select</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="guest-count">Number of Guests <span aria-hidden="true">*</span></label>
+              <input id="guest-count" name="guestCount" type="number" min="1" step="1" required>
+            </div>
+
+            <fieldset class="field-group form-field-full">
+              <legend>Event Venue / Location</legend>
+              <div class="form-grid form-grid-two">
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address</span>
+                  <input name="streetAddress" type="text" autocomplete="street-address" placeholder="Street Address">
+                  <small>Street Address</small>
+                </label>
+                <label class="form-field-full">
+                  <span class="sr-only">Street Address Line 2</span>
+                  <input name="streetAddressLine2" type="text" autocomplete="address-line2" placeholder="Street Address Line 2">
+                  <small>Street Address Line 2</small>
+                </label>
+                <label>
+                  <span class="sr-only">City</span>
+                  <input name="city" type="text" autocomplete="address-level2" placeholder="City">
+                  <small>City</small>
+                </label>
+                <label>
+                  <span class="sr-only">State / Province</span>
+                  <input name="state" type="text" autocomplete="address-level1" placeholder="State / Province">
+                  <small>State / Province</small>
+                </label>
+                <label>
+                  <span class="sr-only">Postal / Zip Code</span>
+                  <input name="postalCode" type="text" autocomplete="postal-code" inputmode="numeric" placeholder="Postal / Zip Code">
+                  <small>Postal / Zip Code</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field form-field-full">
+              <label for="preferred-menu">Preferred Cuisine or Menu</label>
+              <input id="preferred-menu" name="preferredMenu" type="text" placeholder="Preferred Cuisine or Menu">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="comments">Additional Requests or Comments</label>
+              <textarea id="comments" name="comments" rows="5" placeholder="Additional Requests or Comments"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button class="button button-red" type="submit">Submit Inquiry</button>
+              <p id="catering-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="social-section" id="follow-us">
       <p>Follow the production line</p>
       <h2>@thefactorylr</h2>
       <div class="social-links">
@@ -212,11 +333,11 @@
   </main>
 
   <footer>
-    <img class="footer-logo" src="assets/factory-header-logo.svg" alt="The Factory Food Truck" width="1375" height="906">
-    <p>Fresh out the Factory. Fast. Fresh. Factory made.</p>
-    <p class="footer-meta">Jacksonville, Arkansas<br>© <span id="year"></span> The Factory LLC</p>
+    <img class="footer-logo" src="assets/factory-logo-client-dark.png" alt="The Factory Food Truck" width="667" height="618">
+    <p>Made to order, served bold at The Factory</p>
   </footer>
 
+  <script src="catering-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
