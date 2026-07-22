@@ -41,7 +41,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 0; transform: rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { top: 0; transform: rotate(-45deg); }
 
-.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-size: cover; background-position: center; }
+.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-size: 180% auto; background-position: 52% center; }
 .hero-copy { width: min(690px, 57vw); min-height: calc(100svh - var(--header)); padding: clamp(28px, 4vw, 58px) 20px clamp(54px, 7vw, 88px) clamp(20px, 3.4vw, 50px); display: flex; flex-direction: column; justify-content: flex-start; position: relative; z-index: 2; }
 .hero-brand { width: max-content; margin: 0 0 12px; position: relative; }
 .hero-brand img { width: min(200px, 52vw); transform: rotate(-1.5deg); }
@@ -196,7 +196,7 @@ footer p { margin: 0; font-weight: 800; }
   .nav-toggle { display: inline-flex; }
   .site-header nav { position: absolute; top: var(--header); left: 0; right: 0; padding: 16px 20px 22px; display: none; flex-direction: column; align-items: stretch; gap: 4px; background: var(--black); border-bottom: 3px solid var(--red); }
   .site-header nav.open { display: flex; }
-  .hero { background-size: cover; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .84) 42%, oklch(0.075 0 0 / .34) 76%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-position: 62% center; }
+  .hero { background-size: auto 145%; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .84) 42%, oklch(0.075 0 0 / .34) 76%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-wings-hero.jpg"); background-position: 52% center; }
   .hero-copy { width: min(680px, 72vw); min-height: 670px; }
   .intro { grid-template-columns: 1fr; }
   .section-heading { display: block; }
@@ -215,7 +215,7 @@ footer p { margin: 0; font-weight: 800; }
 @media (max-width: 560px) {
   :root { --page: calc(100vw - 32px); --header: 72px; }
   .wordmark { width: 72px; height: 58px; }
-  .hero { background-size: cover; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .95) 0%, oklch(0.075 0 0 / .88) 54%, oklch(0.075 0 0 / .42) 100%), url("assets/factory-wings-hero.jpg"); background-position: 62% center; }
+  .hero { background-size: auto 145%; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .95) 0%, oklch(0.075 0 0 / .88) 54%, oklch(0.075 0 0 / .42) 100%), url("assets/factory-wings-hero.jpg"); background-position: 50% center; }
   .hero-copy { width: 100%; min-height: 720px; padding: 24px 20px 54px; }
   .hero-brand img { width: min(176px, 48vw); }
   .hero h1 { font-size: clamp(3.35rem, 16vw, 5rem); }
