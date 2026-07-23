@@ -25,7 +25,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 30; padding: 12px 16px; color: var(--black); background: var(--white); transform: translateY(-140%); }
 .skip-link:focus { transform: translateY(0); }
 
-.site-header { min-height: var(--header); padding: 9px clamp(16px, 3vw, 44px); display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 3px solid var(--red); background: oklch(0.075 0 0 / .97); position: sticky; top: 0; z-index: 20; }
+.site-header { min-height: var(--header); padding: max(9px, env(safe-area-inset-top)) max(16px, 3vw, env(safe-area-inset-right)) 9px max(16px, 3vw, env(safe-area-inset-left)); display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 3px solid var(--red); background: oklch(0.075 0 0 / .97); position: sticky; top: 0; z-index: 20; }
 .wordmark { width: 94px; height: 70px; display: block; text-decoration: none; }
 .wordmark img { width: 100%; height: 100%; object-fit: contain; }
 .site-header nav { display: flex; align-items: center; gap: 34px; }
@@ -41,7 +41,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 0; transform: rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { top: 0; transform: rotate(-45deg); }
 
-.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-food-collage.png"); background-size: 100% 100%; background-position: center; }
+.hero { min-height: calc(100svh - var(--header)); display: block; overflow: hidden; position: relative; background-color: var(--black); background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .82) 34%, oklch(0.075 0 0 / .42) 62%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-food-collage.png"); background-size: cover; background-position: center; }
 .hero-copy { width: min(690px, 57vw); min-height: calc(100svh - var(--header)); padding: clamp(28px, 4vw, 58px) 20px clamp(54px, 7vw, 88px) clamp(20px, 3.4vw, 50px); display: flex; flex-direction: column; justify-content: flex-start; position: relative; z-index: 2; }
 .hero-brand { width: max-content; margin: 0 0 12px; position: relative; }
 .hero-brand img { width: min(200px, 52vw); transform: rotate(-1.5deg); }
@@ -194,9 +194,10 @@ footer p { margin: 0; font-weight: 800; }
 
 @media (max-width: 900px) {
   .nav-toggle { display: inline-flex; }
-  .site-header nav { position: absolute; top: var(--header); left: 0; right: 0; padding: 16px 20px 22px; display: none; flex-direction: column; align-items: stretch; gap: 4px; background: var(--black); border-bottom: 3px solid var(--red); }
+  .site-header nav { position: absolute; top: 100%; left: 0; right: 0; padding: 12px 20px max(22px, env(safe-area-inset-bottom)); display: none; flex-direction: column; align-items: stretch; gap: 4px; background: var(--black); border-bottom: 3px solid var(--red); }
   .site-header nav.open { display: flex; }
-  .hero { background-size: 100% 100%; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .84) 42%, oklch(0.075 0 0 / .34) 76%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-food-collage.png"); background-position: center; }
+  .site-header nav a { min-height: 48px; font-size: .9rem; }
+  .hero { background-size: cover; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .94) 0%, oklch(0.075 0 0 / .84) 42%, oklch(0.075 0 0 / .34) 76%, oklch(0.075 0 0 / .12) 100%), url("assets/factory-food-collage.png"); background-position: 68% center; }
   .hero-copy { width: min(680px, 72vw); min-height: 670px; }
   .intro { grid-template-columns: 1fr; }
   .section-heading { display: block; }
@@ -213,29 +214,49 @@ footer p { margin: 0; font-weight: 800; }
 }
 
 @media (max-width: 560px) {
-  :root { --page: calc(100vw - 32px); --header: 72px; }
+  :root { --page: calc(100vw - 32px); --header: calc(72px + env(safe-area-inset-top)); }
   .wordmark { width: 72px; height: 58px; }
-  .hero { background-size: 100% 100%; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .95) 0%, oklch(0.075 0 0 / .88) 54%, oklch(0.075 0 0 / .42) 100%), url("assets/factory-food-collage.png"); background-position: center; }
-  .hero-copy { width: 100%; min-height: 720px; padding: 24px 20px 54px; }
-  .hero-brand img { width: min(176px, 48vw); }
-  .hero h1 { font-size: clamp(3.35rem, 16vw, 5rem); }
-  .hero h1 strong { width: auto; }
+  .hero { min-height: max(650px, calc(100svh - var(--header))); background-size: auto 100%; background-image: linear-gradient(90deg, oklch(0.075 0 0 / .95) 0%, oklch(0.075 0 0 / .88) 54%, oklch(0.075 0 0 / .42) 100%), url("assets/factory-food-collage.png"); background-position: 76% center; }
+  .hero-copy { width: 100%; min-height: max(650px, calc(100svh - var(--header))); padding: 24px 20px max(54px, env(safe-area-inset-bottom)); }
+  .hero-brand img { width: min(158px, 42vw); }
+  .hero h1 { max-width: 6.5ch; font-size: clamp(3rem, 14vw, 4.5rem); }
+  .hero h1 strong { width: max-content; max-width: calc(100vw - 40px); }
+  .hero-lede { max-width: 28ch; margin-top: 20px; }
+  .hero-actions { width: min(270px, 100%); flex-direction: column; gap: 10px; margin-top: 24px; }
   .hero-actions .button { width: 100%; }
+  .hours-line { margin-top: 18px; }
   .intro-logo { padding: 14px; }
   .intro-logo::after { right: 0; }
+  .intro { padding-top: 64px; padding-bottom: 76px; gap: 38px; }
+  .intro-copy h2, .food-copy h2, .visit-copy h2, .social-section h2 { font-size: clamp(3rem, 14vw, 4.6rem); }
   .section-heading h2 { font-size: 3.55rem; }
   .menu-section { padding-left: 16px; padding-right: 16px; }
-  .menu-block { padding: 28px 14px; }
+  .menu-block { padding: 26px 18px; }
   .menu-title { display: block; }
   .menu-title span { display: block; margin-top: 8px; text-align: left; }
+  .menu-title h3 { font-size: clamp(2.1rem, 10vw, 3rem); }
+  .price-list > div { gap: 8px; }
+  .price-list dt { min-width: 0; }
   .catering-note { align-items: stretch; flex-direction: column; }
   .catering-note .button { width: 100%; }
   .flavor-board ul { columns: 1; }
   .combo-list { grid-template-columns: 1fr; }
   .dish-list h4 b { float: none; display: block; margin-top: 5px; }
-  .food-story { gap: 14px; }
-  .food-copy { margin-bottom: 26px; }
-  .food-image { height: 76vw; border-width: 5px; }
+  .food-story { grid-template-columns: 1fr; gap: 30px; padding: 68px 18px max(88px, env(safe-area-inset-bottom)); }
+  .food-copy { grid-column: auto; grid-row: auto; order: 1; margin-bottom: 0; }
+  .food-image { width: min(100%, 360px); height: min(520px, 132vw); justify-self: center; border-width: 5px; }
+  .food-image:first-child { order: 2; }
+  .front-cup { order: 3; transform: rotate(2deg); }
+  .visit-section { min-height: auto; }
+  .visit-copy { padding: 64px 20px 58px; }
+  .visit-actions { flex-direction: column; align-items: stretch; margin-top: 24px; }
+  .visit-actions .button { width: 100%; }
+  .map-panel, .map-panel iframe { min-height: 380px; }
+  .catering-form-section { padding-left: 16px; padding-right: 16px; }
+  .catering-form-frame { border-width: 6px; }
+  .native-form-header, .native-form-body { padding-left: 18px; padding-right: 18px; }
+  .native-form-body { gap: 20px; }
+  .native-catering-form input, .native-catering-form select, .native-catering-form textarea { font-size: 16px; }
   .catering-hero { padding-top: 54px; padding-bottom: 64px; }
   .catering-hero-copy h1 { font-size: clamp(3.4rem, 16vw, 5.2rem); }
   .native-form-body { grid-template-columns: 1fr; }
@@ -247,7 +268,7 @@ footer p { margin: 0; font-weight: 800; }
   .visit-actions .button { width: 100%; }
   .map-panel { min-height: 390px; border-width: 7px; }
   .map-panel iframe { min-height: 390px; }
-  footer { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; padding-bottom: max(34px, env(safe-area-inset-bottom)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
