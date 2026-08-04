@@ -15,8 +15,9 @@ Then open `http://127.0.0.1:4173`.
 ## Business details
 
 - Walk-up pickup only
-- Monday through Saturday, 11 AM–5 PM or sellout
-- Closed Sunday
+- Monday through Wednesday, 11 AM–4 PM or sellout
+- Closed Thursday
+- Friday through Sunday, 11 AM–4 PM or sellout
 - Instagram: `@thefactorylr`
 
 Menu prices and descriptions were transcribed from the supplied menu board on June 27, 2026.

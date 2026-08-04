@@ -106,10 +106,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .featured-price span { font-weight: 900; text-transform: uppercase; }
 .drink-flavors { padding: 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
 .drink-flavors li { padding: 7px 10px; border: 2px solid var(--white); font-weight: 800; }
-.tea-menu { margin-top: 30px; padding-top: 22px; border-top: 3px solid var(--red); }
-.tea-menu h4 { margin: 0; font: 900 clamp(1.8rem, 3vw, 2.4rem)/1 var(--display); text-transform: uppercase; }
-.tea-menu .featured-price { margin-top: 18px; }
-.tea-menu .small-note { margin-top: 12px; }
 .compact { margin-bottom: 12px; }
 .price-list.compact.chicken-tenders { margin-bottom: 0; }
 .combo-list { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 26px; background: var(--red); }
